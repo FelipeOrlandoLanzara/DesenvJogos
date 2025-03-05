@@ -17,7 +17,7 @@ public class PlayerControl : MonoBehaviour {
 
     void Update() {
         Mover();
-        if (Input.GetKeyDown(KeyCode.Space) && Time.time > lastShootTime + 0.1f) { 
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time > lastShootTime + 0.3f) { 
             Atirar();
             lastShootTime = Time.time;  // Atualiza o tempo do último disparo
         }

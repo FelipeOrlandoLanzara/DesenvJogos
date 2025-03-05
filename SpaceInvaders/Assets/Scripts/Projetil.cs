@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 using TMPro; // Importante para usar o TextMeshPro
 
 public class Projetil : MonoBehaviour {
@@ -8,7 +9,8 @@ public class Projetil : MonoBehaviour {
     private Rigidbody2D rb2d;
     public Vector3 direction;
     public float speed;
-    public int pontuacao = 0;
+    public static int pontuacao = 0;
+    public static int invasores = 33;
 
     // Referência para o texto de pontuação (TextMeshPro)
 
@@ -26,19 +28,41 @@ public class Projetil : MonoBehaviour {
             Destroy(gameObject);
         }
         else if (other.CompareTag("InvasorBaixo")) {
-            Destroy(gameObject);
-            Destroy(other.gameObject);
+            Destroy(gameObject); // Destruir o projétil
+            Destroy(other.gameObject); // Destruir o invasor
             pontuacao += 10;
+            invasores--;
+            Debug.Log(invasores);
+            WinGame();
         }
         else if (other.CompareTag("InvasorMeio")) {
             Destroy(gameObject);
             Destroy(other.gameObject);
             pontuacao += 20;
+            invasores--;
+            Debug.Log(invasores);
+            WinGame();
         }
         else if (other.CompareTag("InvasorCima")) {
             Destroy(gameObject);
             Destroy(other.gameObject);
             pontuacao += 30;
+            invasores--;
+            Debug.Log(invasores);
+            WinGame();
+        }
+        else if (other.CompareTag("Nave")) {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+            pontuacao += 50;
+        }
+        // qualquer outro que queira adicionar
+    }
+
+    private void WinGame() {
+        if (invasores == 0) {
+            SceneManager.LoadScene("WinGame");
         }
     }
+
 }

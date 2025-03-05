@@ -8,6 +8,8 @@ TagManager:
   - InvasorMeio
   - InvasorCima
   - InvasorBaixo
+  - Invasor
+  - Nave
   layers:
   - Default
   - TransparentFX
