@@ -11,8 +11,8 @@ void OnGUI () {
     style.fontSize = 50;  // Define o tamanho da fonte
     style.alignment = TextAnchor.MiddleCenter;  // Alinha o texto no centro
     if (GUI.Button(new Rect(Screen.width / 2 - 60, 350, 120, 53), "RESTART")) {
-        Projetil.pontuacao = 0;
-        SceneManager.LoadScene("LoadGame");
+        //Projetil.pontuacao = 0;
+        SceneManager.LoadScene("Game");
     }
 
     // Exibe o texto com o novo estilo

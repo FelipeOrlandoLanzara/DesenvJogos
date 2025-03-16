@@ -226,7 +226,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      winn_0: -549147480647460548
+      winn_1: 4376584490541137835
+      winn_2: -1098640435584371728
+      winn_3: -235611392090843242
+      winn_4: -6135891426657203167
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
