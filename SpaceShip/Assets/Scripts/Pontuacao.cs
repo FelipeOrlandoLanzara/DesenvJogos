@@ -7,7 +7,7 @@ public class Pontuacao : MonoBehaviour {
 
     void OnGUI () {
     GUI.skin = layout;
-    GUI.Label(new Rect(Screen.width / 2 - 150 - 12, 20, 4000, 4000), "Pontuação: ");
+    GUI.Label(new Rect(Screen.width / 2 - 150 - 12, 20, 4000, 4000), "Pontuação: " + Projetil.pontuacao);
     }
 
 }

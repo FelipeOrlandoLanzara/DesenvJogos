@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class EnemyProjetil : MonoBehaviour
@@ -7,8 +8,6 @@ public class EnemyProjetil : MonoBehaviour
     private Rigidbody2D rb2d;
     public Vector3 direction;
     public float speed;
-
-    // Referência para o texto de pontuação (TextMeshPro)
 
     void Start() {
         rb2d = GetComponent<Rigidbody2D>();
@@ -22,7 +21,7 @@ public class EnemyProjetil : MonoBehaviour
         }
         else if (other.CompareTag("Player")) {
             Destroy(gameObject); // Destruir o projétil
-            //Destroy(other.gameObject); // Destruir o invasor
+            SceneManager.LoadScene("Lose");
             Debug.Log("AAA");
         }
 

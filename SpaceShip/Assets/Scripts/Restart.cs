@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class EndGame : MonoBehaviour {
 
 void OnGUI () {
+    Projetil.pontuacao = 0;
+    Projetil.naveVidas = 10;
 
     GUIStyle style = new GUIStyle();
     style.fontSize = 50;  // Define o tamanho da fonte

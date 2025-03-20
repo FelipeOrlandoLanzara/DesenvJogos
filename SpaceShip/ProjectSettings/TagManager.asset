@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Barreira
   - Enemy
+  - Laser
   layers:
   - Default
   - TransparentFX
